@@ -15,7 +15,7 @@ console.log("\x1b[31m%s\x1b[0m", `
 ╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝ ╚══╝╚══╝ ╚══════╝
 \n`);
 console.log("\x1b[32m%s\x1b[0m", " Welcome to ismaiwz#7045's asset stealer. Thats only for shirts and pants. Only for educational purposes!")
-rl.question("Enter asset ID: ", async function(id) {
+rl.question("15546972754", async function(id) {
   const asset = `https://assetdelivery.roblox.com/v1/asset?id=${id}`;
   const response = await fetch(asset)
     .then(res => res.text())
@@ -33,7 +33,7 @@ rl.question("Enter asset ID: ", async function(id) {
 
   if (!res) return;
 
-  const type = ".png";
+  const type = ".bmp";
   fs.writeFileSync(`./assets/${newId}${type}`, Buffer.from(res));
   console.log(`Asset with ID ${newId} saved as ./assets/${newId}${type}`);
   rl.close();
